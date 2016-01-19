@@ -14,8 +14,6 @@
 
        <amq:topic id="topic1" physicalName="chattopic"/>
 
-
-
        <!-- Pooled ActiveMQ connection factory -->
        <bean id="connectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory">
               <constructor-arg value="failover:(tcp://localhost:61616)"/>

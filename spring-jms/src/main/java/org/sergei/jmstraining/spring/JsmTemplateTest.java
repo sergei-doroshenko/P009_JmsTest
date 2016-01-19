@@ -22,7 +22,7 @@ public class JsmTemplateTest {
         jsmTemplate.send("SpringSendTestQueue", new MessageCreator() {
             public Message createMessage(Session session) throws JMSException {
                 TextMessage message = session.createTextMessage();
-                message.setText("This is a test message!");
+                message.setText("This is a SPRING test message!");
                 return message;
             }
         });

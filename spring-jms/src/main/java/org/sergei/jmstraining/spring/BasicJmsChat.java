@@ -11,6 +11,13 @@ import java.io.InputStreamReader;
 
 /**
  * Created by sergei on 12/31/15.
+ *
+ * create executable jar
+ * mvn clean package
+ *
+ * run jar
+ * java -jar spring-jms-1.0.jar sssssdf
+ *
  */
 public class BasicJmsChat implements MessageListener {
     private JmsTemplate jmsTemplate;

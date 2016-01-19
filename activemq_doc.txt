@@ -1,0 +1,24 @@
+# Download and extract activemq-all-5.13.0.jar
+# In /home/sergei/Downloads/activemq/apache-activemq-5.13.0/conf directory check next files:
+# login.config
+# users.properties add admin=admin
+# groups.properties add admins=admin
+# and add user e.x. 
+# so username=admin password=admin
+# Now you can start broker:
+
+cd /home/sergei/Downloads/activemq/apache-activemq-5.13.0/bin
+./activemq start
+
+# And get on uri http://localhost:8161/admin
+
+netstat -tulpen | grep -i java
+
+# In spring module - create executeable jar, may be in this directory.
+/home/sergei/projects/idea_projects/P009_JmsTest/spring-jms/target/spring-jms-1.0.jar
+
+# Go to the target directory and run jar
+cd /home/sergei/projects/idea_projects/P009_JmsTest/spring-jms/target && java -jar spring-jms-1.0.jar sssssdf
+
+
+/usr/bin/java -Xms64M -Xmx1G -Djava.util.logging.config.file=logging.pr
