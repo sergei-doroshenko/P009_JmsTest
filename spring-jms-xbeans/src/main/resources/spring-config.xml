@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simple="http://sergei.org/schema/simple"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://sergei.org/schema/core http://sergei.org/schema/core.xsd">
+        http://sergei.org/schema/simple http://sergei.org/schema/simple.xsd">
 
-       <simple xmlns="http://sergei.org/schema/core" myProperty="testMe">
+       <simple xmlns="http://sergei.org/schema/simple" myProperty="testMe">
 
               <simpleController>
                      <simpleController controllerName="testMeToo" />
@@ -17,4 +17,8 @@
               </controllers>
 
        </simple>
+
+       <bean id="myBean" class="org.sergei.MyBean">
+              <property name="description" value="Hello"/>
+       </bean>
 </beans>

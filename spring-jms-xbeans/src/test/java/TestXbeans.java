@@ -1,4 +1,5 @@
 import org.apache.xbean.spring.context.ClassPathXmlApplicationContext;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.sergei.ComplexController;
@@ -23,7 +24,7 @@ public class TestXbeans {
     public void testBeanGetsCreated() {
 
         // Got to use the XBean version of the Application Context
-        ApplicationContext context = new ClassPathXmlApplicationContext("/spring-config.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
         assertEquals(1, context.getBeansOfType(SimpleBean.class).size());
 
         SimpleBean bean = context.getBean(SimpleBean.class);

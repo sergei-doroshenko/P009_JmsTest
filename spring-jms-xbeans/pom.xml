@@ -11,11 +11,11 @@
 
     <groupId>org.sergei</groupId>
     <artifactId>spring-jms-xbeans</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
-        <!--<xbean.version>3.4.3</xbean.version>-->
         <xbean.version>3.9</xbean.version>
         <spring.version>3.0.6.RELEASE</spring.version>
     </properties>
@@ -42,30 +42,19 @@
             <artifactId>junit</artifactId>
             <version>4.8.2</version>
         </dependency>
-
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.xbean</groupId>
-                <artifactId>maven-xbean-plugin</artifactId>
-                <version>${xbean.version}</version>
-                <executions>
-                    <execution>
-                        <phase>process-classes</phase>
-                        <configuration>
-                            <namespace>http://sergei.org/schema/core</namespace>
-                            <schema>${basedir}/target/classes/core.xsd</schema>
-                            <outputDir>${basedir}/target/classes</outputDir>
-                            <generateSpringSchemasFile>true</generateSpringSchemasFile>
-                            <strictXsdOrder>false</strictXsdOrder>
-                        </configuration>
-                        <goals>
-                            <goal>mapping</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <!--version>2.3.2</version-->
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -12,6 +12,7 @@
         <module>core_jms_asynchronous</module>
         <module>spring-jms</module>
         <module>spring-jms-xbeans</module>
+        <module>xbeans-simple</module>
     </modules>
 
     <dependencies>
